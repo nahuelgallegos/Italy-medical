@@ -1,122 +1,56 @@
-/* Nombre del usuario */
-let nombre_usuario = prompt("Ingrese su nombre")
-console.log ("Bienvenido a Italy Medical" , nombre_usuario);
-/* Edad del usuario */
-let edad_usuario = prompt("Ingrese su edad");
-/* Valor de el plan standard */
-let plan_standard = parseInt("6000");
-/* Valor del plan premiun */
-let plan_premiun = parseInt("9000");
-/* Valor de plan allinclusive */
-let plan_allinclusive = parseInt("14000");
-/* Valor de los niños */
-let niño = parseInt("4000");
-/* Valor de los adolescentes */
-let Adolescente = parseInt ("6000");
-/* Valor de los jovenes */
-let Joven = parseInt("9000");
-/* Valor de los adultos */
-let Adulto = parseInt("12000");
 
+/* Nombre usuario */
+let nombre_usuario = prompt("Bienvenido a Italy medical. Ingrese su nombre:")
+console.log("Bienvenido a la cotizacion de su plan", nombre_usuario,)
+/* Edad usuario */
+let edad = prompt("Ingrese su edad")
 
-/* Comienzo de plan niño */
+/* Edades y su valor  */
+function edades (){
+    if (edad <=12){
+        let niño = parseInt(2000)
+        console.log("Por su edad le corresponde el plan niño") 
+        return niño
+    }
+    else if (edad <= 19){
+        let adolescente = parseInt(4000)
+        console.log("Por su edad le corresponde el plan adolescente" )
+        return adolescente
+    }
+    else if (edad <= 30){
+        let joven = parseInt(6000)
+        console.log("Por su edad le corresponde el plan joven")
+        return joven
+    }
+    else if (edad <= 60){
+        let adulto = parseInt(9000)
+        console.log("Por su edad le corresponde el plan adulto")
+        return adulto
+    }
 
-if(edad_usuario <= 12  ) {
-   
-    console.log("Por su edad le corresponde el plan Niño")
-    let plan = prompt ("Elija el numero del plan que desea cotizar: 1- Plan Standard , 2- Plan Premiun , 3- Plan All inclusive")
+}
+/* Fin edades */
+
+/* Planes y su valor */
+let plan = prompt("Ingrese el numero del plan que desea cotizar: 1 -Standard, 2 -Premiun, 3 -All inclusive")
+function planes (){
     if (plan == "1"){
-        let suma = plan_standard + niño ;
-        console.log("La cotizacion de su plan Niño Standard es:" , suma)
-
+        let standard = parseInt(4000)
+        return standard
     }
     else if (plan == "2"){
-        let suma_premiun = plan_premiun + niño ;
-        console.log("La cotizacion de su plan Niño Premiun es:" , suma_premiun)
-
+        let premiun = parseInt(6000)
+        return premiun
     }
     else if (plan == "3"){
-        let suma_allinclusive = plan_allinclusive + niño ;
-        console.log("La cotizacion de su plan Niño All inclusive es:" , suma_allinclusive)
-
+        let all_inclusive = parseInt(10000)
+        return all_inclusive
     }
 
 }
-/* Fin de plan niño */
+/* Fin planes  */
 
-/* Comienzo de plan adolescente */
+/* Variable que suma el valor de edades y planes */
+let suma = edades() + planes()
 
-else if (edad_usuario <= 19 ){
-    console.log("Por su edad le corresponde el plan Adolescente")
-    let plan = prompt ("Elija el numero del plan que desea cotizar: 1- Plan Standard , 2- Plan Premiun , 3- Plan All inclusive")
-    if (plan == "1"){
-        let suma = plan_standard + Adolescente ;
-        console.log("La cotizacion de su plan Adolescente Standard es:" , suma)
-
-    }
-    else if (plan == "2"){
-        let suma_premiun = plan_premiun + Adolescente ;
-        console.log("La cotizacion de su plan Adolescente Premiun es:" , suma_premiun)
-
-    }
-    else if (plan == "3"){
-        let suma_allinclusive = plan_allinclusive + Adolescente ;
-        console.log("La cotizacion de su plan Adolescente All inclusive es:" , suma_allinclusive)
-
-    }
-}
-/* Fin plan adolescente */
-
-/* Comienzo plan joven */
-
-else if (edad_usuario <= 30 ){
-    console.log("Por su edad le corresponde el plan Joven")
-    let plan = prompt ("Elija el numero del plan que desea cotizar: 1- Plan Standard , 2- Plan Premiun , 3- Plan All inclusive")
-    if (plan == "1"){
-        let suma = plan_standard + Joven ;
-        console.log("La cotizacion de su plan Joven Standard es:" , suma)
-
-    }
-    else if (plan == "2"){
-        let suma_premiun = plan_premiun + Joven ;
-        console.log("La cotizacion de su plan Joven Premiun es:" , suma_premiun)
-
-    }
-    else if (plan == "3"){
-        let suma_allinclusive = plan_allinclusive + Joven ;
-        console.log("La cotizacion de su plan Joven All inclusive es:" , suma_allinclusive)
-
-    }
-}
-/* Fin plan joven */
-
-/* Comienzo plan adulto */
-else if (edad_usuario <= 60 ){
-    console.log("Por su edad le corresponde el plan Adulto")
-    let plan = prompt ("Elija el numero del plan que desea cotizar: 1- Plan Standard , 2- Plan Premiun , 3- Plan All inclusive")
-    if (plan == "1"){
-        let suma = plan_standard + Adulto ;
-        console.log("La cotizacion de su plan Adulto Standard es:" , suma)
-
-    }
-    else if (plan == "2"){
-        let suma_premiun = plan_premiun + Adulto ;
-        console.log("La cotizacion de su plan Adulto Premiun es:" , suma_premiun)
-
-    }
-    else if (plan == "3"){
-        let suma_allinclusive = plan_allinclusive + Adulto ;
-        console.log("La cotizacion de su plan Adulto All inclusive es:" , suma_allinclusive)
-
-    }
-}
-/* Fin plan adulto */
-
-/* Si la persona que desea adquirir el plan es mayor de 60 años */
-else {
-    console.log("¨Por el momento nuestra empresa no trabaja con personas mayores de 60 años.")
-}
-
-
-
-
+console.log("La cotizacion final de su cuota mensual es:", suma)
