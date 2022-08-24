@@ -1,9 +1,6 @@
 
-/* Nombre usuario */
-let nombre_usuario = prompt("Bienvenido a Italy medical. Ingrese su nombre:")
-console.log("Bienvenido a la cotizacion de su plan", nombre_usuario,)
 /* Edad usuario */
-let edad = prompt("Ingrese su edad")
+let edad = prompt("Bienvenido a Italy medical.Para cotizar su plan por favor ingrese su edad")
 
 /* Edades y su valor  */
 function edades (){
@@ -54,3 +51,31 @@ function planes (){
 let suma = edades() + planes()
 
 console.log("La cotizacion final de su cuota mensual es:", suma)
+
+
+/* Comienzo de registrarse*/
+class usuario {
+    constructor(nombre,apellido,email,dni){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.dni = dni;
+    }
+}
+
+let lista_usuarios = [];
+for (let i = 0 ; i < 1; i ++){
+  let nombre = prompt("Ingrese su nombre");
+  let apellido = prompt("Ingrese su apellido");
+  let email = prompt("Ingrese su email")
+  let dni = (prompt("Ingrese su DNI"));
+  let nuevo_usuario = new usuario(nombre,apellido, email,dni);
+  lista_usuarios.push(nuevo_usuario);
+}
+for (let usuario of lista_usuarios){
+    console.log (usuario);
+    }
+console.log ("Su cuenta a sido creada con exito");
+/* Fin de registrarse */
+
+
