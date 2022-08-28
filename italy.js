@@ -48,34 +48,50 @@ function planes (){
 /* Fin planes  */
 
 /* Variable que suma el valor de edades y planes */
-let suma = edades() + planes()
+let cotizar = edades()+ planes();
+console.log("La cotizacion final de su cuota mensual es:", cotizar) 
 
-console.log("La cotizacion final de su cuota mensual es:", suma)
 
 
 /* Comienzo de registrarse*/
-class usuario {
-    constructor(nombre,apellido,email,dni){
+ class usuario {
+    constructor(nombre,apellido,email,dni,precio){
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.dni = dni;
+        this.precio = precio;
     }
 }
-
 let lista_usuarios = [];
 for (let i = 0 ; i < 1; i ++){
-  let nombre = prompt("Ingrese su nombre");
+    let nombre = prompt("Ingrese su nombre");
   let apellido = prompt("Ingrese su apellido");
   let email = prompt("Ingrese su email")
   let dni = (prompt("Ingrese su DNI"));
-  let nuevo_usuario = new usuario(nombre,apellido, email,dni);
+  let precio = edades()+ planes();
+  let nuevo_usuario = new usuario(nombre,apellido, email,dni, precio);
   lista_usuarios.push(nuevo_usuario);
 }
 for (let usuario of lista_usuarios){
-    console.log (usuario);
+    console.log (lista_usuarios);
     }
-console.log ("Su cuenta a sido creada con exito");
-/* Fin de registrarse */
+    console.log ("Su cuenta a sido creada con exito"); 
+    /* Fin de registrarse */
 
 
+   /* Comienzo de aumento  */ 
+    function precio_cuarto_mes (usuario){
+        let aumento = usuario.precio * 0.30; 
+        return {
+          nombre: usuario.nombre,
+          apellido: usuario.apellido,
+          email: usuario.email,
+          dni: usuario.dni,
+          precio: usuario.precio+ aumento ,
+        
+      };
+    }
+      let precio_con_aumento = lista_usuarios.map (precio_cuarto_mes);
+      console.log("Su plan dentro de 4 meses quedara de la siguiente manera", precio_con_aumento);
+      /* Fin de aumento */
