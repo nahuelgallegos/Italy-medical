@@ -1,97 +1,74 @@
 
-/* Edad usuario */
-let edad = prompt("Bienvenido a Italy medical.Para cotizar su plan por favor ingrese su edad")
+/* Funcion para saber la edad del usuario */
+function validar(){
+    let nombre = document.getElementById("edad_usuario");
+    let mensaje = document.getElementById("mensaje");
 
-/* Edades y su valor  */
-function edades (){
-    if (edad <=12){
-        let niño = parseInt(2000)
-        console.log("Por su edad le corresponde el plan niño") 
-        return niño
-    }
-    else if (edad <= 19){
-        let adolescente = parseInt(4000)
-        console.log("Por su edad le corresponde el plan adolescente" )
-        return adolescente
-    }
-    else if (edad <= 30){
-        let joven = parseInt(6000)
-        console.log("Por su edad le corresponde el plan joven")
-        return joven
-    }
-    else if (edad <= 60){
-        let adulto = parseInt(9000)
-        console.log("Por su edad le corresponde el plan adulto")
-        return adulto
+    if (nombre.value <= 12 ){
+        let parrafo = document.createElement("p");
+        parrafo.innerText = "Por su edad le corresponde el plan niño, que tiene un valor de $4000";
+        parrafo.style.fontFamily = "Arial";
+        parrafo.style.fontSize = "30px";
+        mensaje.append(parrafo);
     }
 
-}
-/* Fin edades */
-
-/* Planes y su valor */
-let plan = prompt("Ingrese el numero del plan que desea cotizar: 1 -Standard, 2 -Premiun, 3 -All inclusive")
-function planes (){
-    if (plan == "1"){
-        let standard = parseInt(4000)
-        return standard
-    }
-    else if (plan == "2"){
-        let premiun = parseInt(6000)
-        return premiun
-    }
-    else if (plan == "3"){
-        let all_inclusive = parseInt(10000)
-        return all_inclusive
+    else if (nombre.value <= 19){
+        let parrafo = document.createElement("p");
+        parrafo.innerText = "Por su edad le corresponde el plan Adolescente, que tiene un valor de $6000";
+        parrafo.style.fontFamily = "Arial";
+        parrafo.style.fontSize = "30px";
+        mensaje.append(parrafo);
     }
 
-}
-/* Fin planes  */
+    else if (nombre.value <=30){
+        let parrafo = document.createElement("p");
+        parrafo.innerText = "Por su edad le corresponde el plan Joven , que tiene un valor de $8000";
+        parrafo.style.fontFamily = "Arial";
+        parrafo.style.fontSize = "30px";
+        mensaje.append(parrafo);
+    }
 
-/* Variable que suma el valor de edades y planes */
-let cotizar = edades()+ planes();
-console.log("La cotizacion final de su cuota mensual es:", cotizar) 
-
-
-
-/* Comienzo de registrarse*/
- class usuario {
-    constructor(nombre,apellido,email,dni,precio){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.dni = dni;
-        this.precio = precio;
+    else if (nombre.value <=60){
+        let parrafo = document.createElement("p");
+        parrafo.innerText = "Por su edad le corresponde el plan Adulto , que tiene un valor de $10000";
+        parrafo.style.fontFamily = "Arial";
+        parrafo.style.fontSize = "30px";
+        mensaje.append(parrafo);
+    }
+    else{
+        document.body.innerHTML = ` <p> Por el momento nuestra empresa no trabaja con personas mayores de 60 años , sepa disculpar las molestias. Estamos trabajando en eso!  </p> `
     }
 }
-let lista_usuarios = [];
-for (let i = 0 ; i < 1; i ++){
-    let nombre = prompt("Ingrese su nombre");
-  let apellido = prompt("Ingrese su apellido");
-  let email = prompt("Ingrese su email")
-  let dni = (prompt("Ingrese su DNI"));
-  let precio = edades()+ planes();
-  let nuevo_usuario = new usuario(nombre,apellido, email,dni, precio);
-  lista_usuarios.push(nuevo_usuario);
+/* Fin funcion edad usuario */
+
+
+
+/* Funcion para saber que plan quiere el usuario */
+function planes(){
+    let plan_usuario = document.getElementById("plan_usuario");
+    let mensajes = document.getElementById("mensajes");
+
+    if (plan_usuario.value == 1) {
+        let parrafos = document.createElement("p");
+        parrafos.innerText = "Usted a elegido el plan Standard, que tiene un valor de $6000";
+        parrafos.style.fontFamily = "Arial";
+        parrafos.style.fontSize = "30px";
+        mensajes.append(parrafos);
+    }
+    else if (plan_usuario.value == 2){
+        let parrafos = document.createElement("p");
+        parrafos.innerText = "Usted a elegido el plan Premiun, que tiene un valor de $10000";
+        parrafos.style.fontFamily = "Arial";
+        parrafos.style.fontSize = "30px";
+        mensajes.append(parrafos);
+
+    }
+    else if (plan_usuario.value == 3){
+        let parrafos = document.createElement("p");
+        parrafos.innerText = "Usted a elegido el plan All inclusive, que tiene un valor de $12000";
+        parrafos.style.fontFamily = "Arial";
+        parrafos.style.fontSize = "30px";
+        mensajes.append(parrafos);
+    }
 }
-for (let usuario of lista_usuarios){
-    console.log (lista_usuarios);
-    }
-    console.log ("Su cuenta a sido creada con exito"); 
-    /* Fin de registrarse */
-
-
-   /* Comienzo de aumento  */ 
-    function precio_cuarto_mes (usuario){
-        let aumento = usuario.precio * 0.30; 
-        return {
-          nombre: usuario.nombre,
-          apellido: usuario.apellido,
-          email: usuario.email,
-          dni: usuario.dni,
-          precio: usuario.precio+ aumento ,
-        
-      };
-    }
-      let precio_con_aumento = lista_usuarios.map (precio_cuarto_mes);
-      console.log("Su plan dentro de 4 meses quedara de la siguiente manera", precio_con_aumento);
-      /* Fin de aumento */
+/* Fin funcion plan usuario */

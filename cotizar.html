@@ -10,7 +10,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <title>Italy medical | Medicina Privada</title>
+    <title>Cotizar mi plan | Italy Medical </title>
 </head>
 <body>
     <!-- Comienzo de header -->
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse  " id="navbarExample01">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active header ">
-                  <a class="nav-link header1" aria-current="page" href="#">Home</a>
+                  <a class="nav-link header1" aria-current="page" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item header ">
                   <a class="nav-link header1" href="#">Planes</a>
@@ -51,32 +51,37 @@
           </div>
         </nav>
         <!-- Navbar -->
-      
-        <!-- Background image -->
-        <div
-          class="p-5 text-center bg-image"
-        >
-        <img src="./multimedia/111.jpg" alt="imagenprincipal" width="800" >
-        
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div class="text-white">
-                <h1 class="mb-3">Bienvenido a Italy Medical</h1>
-                <h4  class="mb-3">Elegi Medicina Privada </h4>
-                <a  class="btn btn-outline-light btn-lg" href="./cotizar.html" role="button" 
-                >Cotizar mi plan</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Background image -->
-      </header>
-      <!-- Fin header -->
-      <!-- Enlance de script -->
-                <script src="./italy.js">
-                     </script>
-                     <!-- Fin enlance script -->
-    
+    </header>
+    <!-- Fin header -->
+
+    <!-- Comienzo de titulo y subtitulo -->
+<div class="centrar_mensajes">
+    <h1>
+        Bienvenido a la cotizacion de su plan 
+    </h1>
+    <h2 class="subtitulo" >
+        Para saber el valor de su cuota mensual ,tiene que sumar los 2 valores que se muestran luego de verificar la edad y elegir el plan que desee.
+    </h2>
+</div>
+<!-- Fin titulo y subtitulo -->
+
+<!-- Comienzo de ingresos de datos del usuario -->
+    <div class="cotizar" >
+        Ingrese su Edad: <input type="text" id="edad_usuario"  class="centrar_mensajes" >
+        <button onclick="validar()" class="centrar_mensajes" >Verificar</button>
+        Ingrese el numero del plan que desea : 1- Standard, 2- Premiun, 3 All inclusive. <input type="text" id="plan_usuario" class="centrar_mensajes" >
+        <button onclick="planes()" class="centrar_mensajes" >Elegir plan </button>
+    </div>
+
+    <!-- Fin de ingresos de datos del usuario -->
+
+    <!-- Comienzo de resultado de cotizacion de plan -->
+    <div id="mensaje" class="centrar_mensajes">
+    </div>
+    <div id="mensajes" class="centrar_mensajes">
+    </div>
+    <!-- Fin resultado de cotizacion de plan-->
+
+    <script src="./italy.js"></script>
 </body>
 </html>
