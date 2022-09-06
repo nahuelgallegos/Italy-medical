@@ -19,13 +19,12 @@
 }
 
 .cotizacion {
-    margin-right: 1rem;
+    margin-right: 3rem;
+    font-size: x-large;
 }
 
 .titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: xx-large;
 }
 
 .centrar_mensajes {
@@ -35,6 +34,8 @@
 
 }
 
-.subtitulo {
-    font-size: large;
+.inputs {
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
 }

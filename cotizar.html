@@ -56,34 +56,34 @@
 
     <!-- Comienzo de titulo y subtitulo -->
 <div class="centrar_mensajes">
-    <h1>
+    <h1 class="titulo">
         Bienvenido a la cotizacion de su plan 
     </h1>
-    <h2 class="subtitulo" >
-        Para saber el valor de su cuota mensual ,tiene que sumar los 2 valores que se muestran luego de verificar la edad y elegir el plan que desee.
-    </h2>
 </div>
 <!-- Fin titulo y subtitulo -->
 
 <!-- Comienzo de ingresos de datos del usuario -->
-    <div class="cotizar" >
-        Ingrese su Edad: <input type="text" id="edad_usuario"  class="centrar_mensajes" >
-        <button onclick="validar()" class="centrar_mensajes" >Verificar</button>
-        Ingrese el numero del plan que desea : 1- Standard, 2- Premiun, 3 All inclusive. <input type="text" id="plan_usuario" class="centrar_mensajes" >
-        <button onclick="planes()" class="centrar_mensajes" >Elegir plan </button>
+<section class="inputs">
+  <div class="cotizar" >
+    <p class="cotizacion">Ingrese su edad</p>
+ <input type="text" id="edad_usuario"  class="centrar_mensajes" >
     </div>
-
+    <div class="cotizar">
+      <p class="cotizacion">Ingrese el numero del plan que desea cotizar: 1- Standard , 2- Premiun , 3- All inclusive</p>
+ <input type="text" id="plan_usuario" class="centrar_mensajes" >
+  </div>
+  <div class="cotizar">
+    <button onclick="suma_planes()" id="sumarre" >Cotizar mi plan</button>
+  </div>
+</section>
     <!-- Fin de ingresos de datos del usuario -->
     
     <!-- Comienzo de resultado de cotizacion de plan -->
-    <div id="mensaje" class="centrar_mensajes">
-    </div>
     <div id="mensajes" class="centrar_mensajes">
     </div>
     <!-- Fin resultado de cotizacion de plan-->
     
-        <button onclick="suma_planes()" id="sumarre">Cotizar mi plan</button>
     
-    <script src="./italyb.js"></script>
+    <script src="./italy.js"></script>
 </body>
 </html>
