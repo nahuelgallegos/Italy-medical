@@ -52,9 +52,11 @@ function planes(){
 }
 /* Fin funcion plan del usuario */
 
-/* Comienzo de function que suma la edad y el plan que quiere el usuario */
+/* Comienzo de function y evento que suma la edad y el plan que quiere el usuario */
 
-function suma_planes(){
+let cotizacion_plan = document.getElementById("cotizar_plan");
+
+cotizacion_plan.addEventListener("click", function suma_planes(){
     let suma = validar() + planes()
     if( suma == 7000 ){
         let parrafos = document.createElement("p");
@@ -142,6 +144,11 @@ function suma_planes(){
         mensajes.append(parrafos);
     }
 
-}
-/* Fin funcion que suma la edad con el plan del usuario */
+})
+/* Fin funcion y evento que suma la edad con el plan del usuario */
+
+
+
+
+
 
