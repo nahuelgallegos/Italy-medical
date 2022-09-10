@@ -1,24 +1,24 @@
 /* Funcion para saber la edad del usuario */
 function validar(){
-    let nombre = document.getElementById("edad_usuario");
-    if (nombre.value <= 12 ){
+    let edad = document.getElementById("edad_usuario");
+    if (edad.value <= 12 ){
         let niño = parseInt(3000);
         return niño
         
     }
 
-    else if (nombre.value <= 19){
+    else if (edad.value <= 19){
         let adolescente = parseInt(5000);
         return adolescente
     }
 
-    else if (nombre.value <=30){
+    else if (edad.value <=30){
         let joven = parseInt(7500);
         return joven
 
     }
 
-    else if (nombre.value <=60){
+    else if (edad.value <=60){
         let adulto = parseInt(13500);
         return adulto
     }
@@ -54,9 +54,9 @@ function planes(){
 
 /* Comienzo de function y evento que suma la edad y el plan que quiere el usuario */
 
-let cotizacion_plan = document.getElementById("cotizar_plan");
 
-cotizacion_plan.addEventListener("click", function suma_planes(){
+ function suma_planes(){
+
     let suma = validar() + planes()
     if( suma == 7000 ){
         let parrafos = document.createElement("p");
@@ -143,9 +143,15 @@ cotizacion_plan.addEventListener("click", function suma_planes(){
         parrafos.style.fontSize = "30px";
         mensajes.append(parrafos);
     }
-
-})
+}
+ let cotizacion_plan = document.getElementById("cotizar_plan");
+cotizacion_plan.addEventListener("click",suma_planes)  
 /* Fin funcion y evento que suma la edad con el plan del usuario */
+
+
+
+
+
 
 
 
