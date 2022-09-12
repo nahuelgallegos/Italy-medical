@@ -19,6 +19,6 @@ boton.addEventListener("click", set_data);
 let registroexitoso = document.getElementById("registrar");
 boton.addEventListener("click", function(){
     let imagen = document.getElementById("registrateaca")
-    imagen.src = "./multimedia/registroexitoso.png"
+    imagen.src = "../multimedia/registroexitoso.png"
 
 })
