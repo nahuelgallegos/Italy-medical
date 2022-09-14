@@ -1,6 +1,5 @@
 /* Arreglo para ir guardando todos los nuevos usuarios */
 let nuevos_usuarios = []
-
 /* Funcion que toma los datos del usuario ,los guarda en el local storage y da un mensaje de que el registro a sido exitoso */
 function set_data(){
 let nombre_usuario = document.getElementById("nombre");
@@ -16,9 +15,19 @@ recuperandoarreglo = JSON.parse(recuperandoarreglo)
 };
 let boton = document.getElementById("boton");
 boton.addEventListener("click", set_data);
+
 let registroexitoso = document.getElementById("registrar");
 boton.addEventListener("click", function(){
     let imagen = document.getElementById("registrateaca")
     imagen.src = "../multimedia/registroexitoso.png"
+});
 
-})
+let [a, b , , d] = nuevos_usuarios;
+console.log(nuevos_usuarios)
+
+/* let nuevos_registros = localStorage.getItem("nuevos_usuarios");
+nuevos_registros = JSON.parse(nuevos_registros);
+ console.log(...nuevos_registros) */
+
+
+
