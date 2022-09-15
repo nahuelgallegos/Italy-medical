@@ -18,16 +18,14 @@ boton.addEventListener("click", set_data);
 
 let registroexitoso = document.getElementById("registrar");
 boton.addEventListener("click", function(){
-    let imagen = document.getElementById("registrateaca")
-    imagen.src = "../multimedia/registroexitoso.png"
+    Swal.fire({
+      imageUrl: '../multimedia/registroexitoso.png',
+      imageHeight: 200,
+      imageAlt: 'Registro exitoso'
+      
+    })
 });
 
-let [a, b , , d] = nuevos_usuarios;
-console.log(nuevos_usuarios)
-
-/* let nuevos_registros = localStorage.getItem("nuevos_usuarios");
-nuevos_registros = JSON.parse(nuevos_registros);
- console.log(...nuevos_registros) */
 
 
 

@@ -25,99 +25,44 @@ function suma_planes(){
     let suma12 = adulto + all_inclusive
 
 if ( suma1 == 7000){
-
-    let parrafos = document.createElement("p");
-    parrafos.innerHTML = "El valor final de su cuota mensual es: $7000", 
-    parrafos.style.fontFamily = "Arial";
-    parrafos.style.fontSize = "30px";
-    mensajes.append(parrafos);}
+    Swal.fire('El valor final de su cuota mensual es: $7000')
+}
     else if (suma2 == 11000){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $11000", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $11000')
     }
     else if (suma3 == 15000){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $15000", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $15000')
     }
     else if (suma4 == 9000){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $9000", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $9000')
     }
     else if (suma5 == 13000){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $13000", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $13000')
     }
     else if (suma6 == 17000){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $17000", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $17000')
     }
     else if (suma7 == 11500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $11500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $11500')
     }
     else if (suma8 == 15500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $15500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $15500')
     }
     else if (suma9 == 19500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $19500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $19500')
     }
     else if (suma10 == 17500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $17500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $17500')
     }
     else if (suma11 == 21500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $21500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('El valor final de su cuota mensual es: $21500')
     }
     else if (suma12 == 25500){
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "El valor final de su cuota mensual es: $25500", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
-
+        Swal.fire('El valor final de su cuota mensual es: $25500')
     }
     else {
-        let parrafos = document.createElement("p");
-        parrafos.innerHTML = "Por el momento nuestra empresa no trabaja con personas mayores de 60 años. Estamos trabajando en eso , sepa disculpar las molestias", 
-        parrafos.style.fontFamily = "Arial";
-        parrafos.style.fontSize = "30px";
-        mensajes.append(parrafos);
+        Swal.fire('Por el momento nuestra empresa no trabaja con personas mayores de 60 años. Estamos trabajando en eso , sepa disculpar las molestias')
     }
-
-
 }
  let cotizacion_plan = document.getElementById("cotizar_plan");
 cotizacion_plan.addEventListener("click",suma_planes)  
