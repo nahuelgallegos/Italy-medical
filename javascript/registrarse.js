@@ -18,12 +18,18 @@ boton.addEventListener("click", set_data);
 
 let registroexitoso = document.getElementById("registrar");
 boton.addEventListener("click", function(){
+  let recuperandoarreglo = localStorage.getItem("nuevos_usuarios")
+recuperandoarreglo = JSON.parse(recuperandoarreglo)
+console.log(recuperandoarreglo)
+
+  if (recuperandoarreglo  ){
     Swal.fire({
       imageUrl: '../multimedia/registroexitoso.png',
       imageHeight: 200,
       imageAlt: 'Registro exitoso'
       
     })
+  }
 });
 
 

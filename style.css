@@ -3,16 +3,32 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2rem;
+    margin: 0.5rem;
+    border-radius: solid 2px black;
+}
+
+.carta{
+    font-family: 'Reem Kufi Ink', sans-serif;
+    font-size: 3rem;
 }
 
 .cotizacion {
-    margin-right: 3rem;
-    font-size: x-large;
+
+    font-size: xx-large;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    background-color: beige;
+    border: solid 2px black;
+    padding: 5px;
+
 }
 
 .titulo {
-    font-size: xx-large;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    font-size: 5rem;
+    background-color: beige;
+    border: solid 2px black;
+    padding: 5px;
+    margin-top: 1rem;
 }
 
 .centrar_mensajes {
@@ -23,7 +39,6 @@
 }
 
 .inputs {
-    border: solid 2px black;
     display: flex;
     flex-direction: column;
 }
@@ -33,6 +48,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 3px black;
+
 
 }
+.centrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+body {
+    background-image: url(./multimedia/aa.webp);    
+}
+.navee {
+    background-color: #a8dadc;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.temp {
+    font-size: 2rem;
+}
+ .nombre_ciudad {
+    font-size: 1.5rem;
+ }

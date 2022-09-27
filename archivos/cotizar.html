@@ -11,6 +11,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Cormorant+SC:wght@600&family=Diplomata+SC&family=Fascinate&family=Kanit:wght@500&family=Lobster&family=Merriweather:ital,wght@1,300&family=Mouse+Memoirs&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+
     <title>Cotizar mi plan | Italy Medical </title>
 </head>
 <body>
@@ -19,36 +24,31 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-black">
           <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse  " id="navbarExample01">
+            <div class="collapse navbar-collapse " id="navbarExample01">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
-                  <a class="btn btn-primary me-3" aria-current="page" href="../index.html">Home</a>
+                  <a class="btn btn-primary me-3 navee" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="btn btn-primary me-3" href="./cotizar.html">Cotizar mi plan</a>
+                  <a class="btn btn-primary me-3 navee" href="./cotizar.html">Cotizar mi plan</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="btn btn-primary me-3" href="#">Cartilla medica</a>
+                  <a class="btn btn-primary me-3 navee" href="#">Cartilla medica</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="btn btn-primary me-3" href="#">Ayuda</a>
+                  <a class="btn btn-primary me-3 navee" href="#">Ayuda</a>
                 </li>
-                <li class="botonregistrar">
-                  <a class="btn btn-primary me-3" href="./registrarte.html">Registrarme</a>
-                </li>
+               </div>
+               <div class="d-flex align-items-center">
+                  <li class="botonregistrar">
+                    <a class="btn btn-primary me-3 navee" href="./iniciarsesion.html">Iniciar Sesion </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-primary me-3 navee" href="./registrarte.html">Registrarme</a>
+                  </li>
+               </div>
               </ul>
             </div>
-          </div>
         </nav>
         <!-- Navbar -->
     </header>
@@ -56,7 +56,7 @@
 
     <!-- Comienzo de titulo y subtitulo -->
 <div class="centrar_mensajes">
-    <h1 class="titulo">
+    <h1 class="titulo animate__animated animate__fadeInDownBig">
         Bienvenido a la cotizacion de su plan 
     </h1>
 </div>
@@ -65,11 +65,15 @@
 <!-- Comienzo de ingresos de datos del usuario -->
 <section class="inputs">
   <div class="cotizar" >
-    <p class="cotizacion">Ingrese su edad</p>
- <input type="text" id="edad_usuario"  class="centrar_mensajes" >
+    <p class="cotizacion animate__animated animate__backInLeft">Ingrese su edad</p>
+  </div>
+  <div class="cotizar">
+      <input type="text" id="edad_usuario"  class="centrar_mensajes" >
     </div>
     <div class="cotizar">
-      <p class="cotizacion">Ingrese el numero del plan que desea cotizar: 1- Standard , 2- Premiun , 3- All inclusive</p>
+      <p class="cotizacion animate__animated animate__backInRight">Ingrese el numero del plan que desea cotizar: 1- Standard , 2- Premiun , 3- All inclusive</p>
+    </div>
+    <div class="cotizar">
  <input type="text" id="plan_usuario" class="centrar_mensajes" >
   </div>
   <div class="cotizar">
