@@ -11,8 +11,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="icon" href="../multimedia/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Cormorant+SC:wght@600&family=Diplomata+SC&family=Fascinate&family=Kanit:wght@500&family=Lobster&family=Merriweather:ital,wght@1,300&family=Mouse+Memoirs&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <title>Italy medical | Medicina Privada</title>
+    <title>Iniciar Sesion | ITALY MEDICAL</title>
 </head>
 <body>
   <!-- Comienzo de header -->
@@ -49,26 +50,33 @@
             <!-- Navbar -->
   </header>
   <!-- Fin header -->
-<section >
-    <div class="cotizar">
-        <h1>Iniciar sesion</h1>
-        <p>Ingrese su email</p>
-        <input type="text" id="ingresaemail">
-        <br>
-        <p>Ingrese su contraseña</p>
-        <input type="text" id="ingresacontraseña">
-        <br>
-        <button id="boton" >Ingresar</button>
-    </div>
+
+  <!-- Comienzo de formulario de ingreso -->
+<section class="centrar_mensajes ">
+      <h2 class="titulo animate__animated animate__fadeInDownBig">Ingresa</h2>
+      <form id="login">
+        <div class="iniciar animate__animated animate__backInLeft">
+          <label class="iniciar_sesion" for="email">Email</label>
+        </div>
+        <div class="iniciar">
+          <input type="text" id="user">
+          <br>
+        </div>
+        <div class="iniciar animate__animated animate__backInRight">
+          <label class="iniciar_sesion" for="contraseña">Contraseña</label>
+        </div>
+        <div class="iniciar">
+          <input type="password"  id="pass">
+        </div>
+        <div class="iniciar" id="contraseña_incorrecta"></div>
+        <div class="cotizar">
+          <button type="submit" id="ingresar">Ingresar</button>
+        </div>
+      </form>
 </section>
+<!-- Fin formulario de ingreso -->
 
-
-
-
-
-
-
-
+<!-- Enlance de script -->
     <script src="../javascript/iniciarsesion.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-
+/* Funcion que pide al usuario ingresar el nombre de la ciudad que desea saber la temperatura */
 function clima(){
     let ciudad = document.getElementById("ciudad");
     let temperatura = document.getElementById("temperatura");
@@ -7,12 +7,12 @@ function clima(){
     .then( response => response.json())
     .then( data => {
         console.log(data)
-        temperatura.innerHTML = ` <span> ${data.name}: </span> 
+        temperatura.innerHTML = ` <span> ${data.name}: </span>
                                  <span> Temperatura actual: ${data.main.temp} | </span>
                                  <span> Temperatura maxima: ${data.main.temp_max} | </span>
-                                 <span> Temperatura minima: ${data.main.temp_min} </span>`                        
+                                 <span> Temperatura minima: ${data.main.temp_min} </span>`                   
     });
+};
 
-}
 let boton = document.getElementById("boton");
 boton.addEventListener("click", clima);

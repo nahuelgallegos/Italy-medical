@@ -11,8 +11,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="icon" href="../multimedia/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Cormorant+SC:wght@600&family=Diplomata+SC&family=Fascinate&family=Kanit:wght@500&family=Lobster&family=Merriweather:ital,wght@1,300&family=Mouse+Memoirs&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <title>Italy medical | Medicina Privada</title>
+    <title>Registrate | ITALY MEDICAL</title>
 </head>
 <body>
   <!-- Comienzo de header -->
@@ -49,32 +50,33 @@
             <!-- Navbar -->
   </header>
   <!-- Fin header -->
-  <!-- Comienzo de inputs para registrarse -->
-  <section>
-    <div id="registrar">
-      <h1 class="titulo animate__animated animate__fadeInDownBig ">Para registrarte ingresa los siguientes datos</h1>
-      <p class="cotizacion animate__animated animate__backInLeft">Nombre</p>
-      <input type="text" id="nombre">
-      <br>
-      <p class="cotizacion animate__animated animate__backInRight">Apellido</p>
-      <input type="text" id="apellido">
-      <br>
-      <p class="cotizacion animate__animated animate__backInLeft">Email</p>
+
+  <!-- Comienzo de formulario de registro de usuario -->
+<section class="centrar_mensajes registrar">
+  <h1 class="titulo animate__animated animate__fadeInDownBig">Registrate</h1>
+  <form id="register">
+    <div class="registrar animate__animated animate__backInLeft">
+      <label class="registrate" for="nombre">Email</label>
+    </div>
+    <div class="registrar">
       <input type="text" id="email">
       <br>
-      <p class="cotizacion animate__animated animate__backInRight">Contraseña</p>
+    </div>
+    <div class="registrar animate__animated animate__backInRight">
+      <label class="registrate" for="contraseña">Contraseña</label>
+    </div>
+    <div class="registrar">
       <input type="text" id="contraseña">
       <br>
-      <button id="boton">Registrate</button>
     </div>
-    <div id="mensajes" class="centrar_mensajes">
-      <img src="" alt="" id="registrateaca">
+    <div class="registrar">
+      <button type="submit" id="registrar">Registrar</button>
     </div>
-  </section>
-  <!-- Fin de inputs -->
+  </form>
+</section>
+<!-- Fin de formulario -->
 
         <!-- Enlance de script -->
-
 <script src="../javascript/registrarse.js"></script>
 </body>
 </html>

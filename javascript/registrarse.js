@@ -1,37 +1,32 @@
-/* Arreglo para ir guardando todos los nuevos usuarios */
-let nuevos_usuarios = []
-/* Funcion que toma los datos del usuario ,los guarda en el local storage y da un mensaje de que el registro a sido exitoso */
-function set_data(){
-let nombre_usuario = document.getElementById("nombre");
-let apellido_usuario = document.getElementById("apellido");
+/* Array que almacena los nuevos usuarios */
+let nuevos_usuarios = [];
+
+/* Variables que almacenan los datos que ingresamos en los inputs */
 let email_usuario = document.getElementById("email");
 let contraseña_usuario = document.getElementById("contraseña");
-let usuario = {nombre: nombre_usuario.value, apellido: apellido_usuario.value , email: email_usuario.value , contraseña: contraseña_usuario.value}
-nuevos_usuarios.push(usuario)
-let arreglojson = JSON.stringify(nuevos_usuarios)
-localStorage.setItem("nuevos_usuarios",arreglojson)
-let recuperandoarreglo = localStorage.getItem("nuevos_usuarios")
-recuperandoarreglo = JSON.parse(recuperandoarreglo)
+let registro_usuario = document.getElementById("register");
+
+/* Clase que construye un nuevo usuario */
+class Usuario {
+  constructor (email, contraseña){
+    this.email = email
+    this.contraseña = contraseña
+  }
 };
-let boton = document.getElementById("boton");
-boton.addEventListener("click", set_data);
 
-let registroexitoso = document.getElementById("registrar");
-boton.addEventListener("click", function(){
-  let recuperandoarreglo = localStorage.getItem("nuevos_usuarios")
-recuperandoarreglo = JSON.parse(recuperandoarreglo)
-console.log(recuperandoarreglo)
-
-  if (recuperandoarreglo  ){
+/* Evento que crea un nuevo usuario , lo almacena en el local storage y lo pusheea a el arreglo de nuevos usuarios */
+registro_usuario.addEventListener("submit",(e) => {
+  e.preventDefault();
+  if(email_usuario.value != "" && contraseña_usuario.value != ""){
+    let nuevo_usuario = new Usuario(email_usuario.value, contraseña_usuario.value);
+    nuevos_usuarios.push(nuevo_usuario);
+    let arreglojson = JSON.stringify(nuevos_usuarios);
+    localStorage.setItem("nuevos_usuarios",arreglojson);
     Swal.fire({
       imageUrl: '../multimedia/registroexitoso.png',
       imageHeight: 200,
       imageAlt: 'Registro exitoso'
-      
     })
   }
 });
-
-
-
 

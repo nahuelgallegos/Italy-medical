@@ -1,27 +1,36 @@
-
-.cotizar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0.5rem;
-    border-radius: solid 2px black;
+/* Comienzo de header */
+.navee {
+    background-color: #a8dadc;
+    color: black;
 }
+/* Fin de header */
 
+/* Comienzo de footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+/* Fin footer */
+
+/* Comienzo de index */
+body {
+    background-image: url(./multimedia/aa.webp);    
+}
+.temp {
+        font-size: 2rem;
+    }
+.nombre_ciudad {
+    font-size: 1.5rem;
+}
 .carta{
     font-family: 'Reem Kufi Ink', sans-serif;
     font-size: 3rem;
 }
+/* Fin de index */
 
-.cotizacion {
-
-    font-size: xx-large;
-    font-family: 'Reem Kufi Ink', sans-serif;
-    background-color: beige;
-    border: solid 2px black;
-    padding: 5px;
-
-}
-
+/* Comienzo de cotizar */
 .titulo {
     font-family: 'Reem Kufi Ink', sans-serif;
     font-size: 5rem;
@@ -30,6 +39,61 @@
     padding: 5px;
     margin-top: 1rem;
 }
+.cotizar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5rem;
+    border-radius: solid 2px black;
+}
+
+.cotizacion {
+    font-size: xx-large;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    background-color: beige;
+    border: solid 2px black;
+    padding: 5px;
+}
+/* Fin de cotizar */
+
+/* Comienzo de registrar */
+.registrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5rem;
+    border-radius: solid 2px black;
+}
+
+.registrate {
+    font-size: xx-large;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    background-color: beige;
+    border: solid 2px black;
+    padding: 5px;
+}
+/* Fin de registrar */
+
+/* Comienzo de iniciar sesion */
+.iniciar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5rem;
+    border-radius: solid 2px black;
+}
+
+.iniciar_sesion {
+    font-size: xx-large;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    background-color: beige;
+    border: solid 2px black;
+    padding: 5px;
+}
+#contraseña_incorrecta {
+    background-color: white;
+}
+/* Fin de iniciar sesion */
 
 .centrar_mensajes {
     display: flex;
@@ -42,38 +106,3 @@
     display: flex;
     flex-direction: column;
 }
-
-
-#registrar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-}
-.centrar {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-body {
-    background-image: url(./multimedia/aa.webp);    
-}
-.navee {
-    background-color: #a8dadc;
-    color: black;
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-.temp {
-    font-size: 2rem;
-}
- .nombre_ciudad {
-    font-size: 1.5rem;
- }
